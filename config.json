@@ -1,0 +1,46 @@
+{
+    "classes": ["leftwards", "rightwards", "backwards", "forwards", "outwards", "inwards", "beckoning", "sliding"],
+    "subjects": ["ws", "wcw", "jpy", "gg", "zxm", "zmy", "zff"],
+    "dataset_root": "./dataset",
+    "pathfile_root": "./pathfile",
+    "inc_ratio": 0.5,
+    "pathfile_random_state": null,
+    "ref_forest_params": 
+    {
+        "from_sklearn": true, 
+        "n_estimators": 20, 
+        "max_depth": 10, 
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+    },
+    "inc_forest_params": 
+    {
+        "from_sklearn": false, 
+        "n_estimators": 50, 
+        "max_depth": 10, 
+        "min_samples_split": 6,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt", 
+        "idxpol_cap": 20,
+        "idxpol_mss": 20,
+        "idxpol_pri": true, 
+        "idxpol_pst": true, 
+        "alpha": 0.1
+    },
+    "feabuf_params":
+    {
+        "block_capacity": 10,
+        "threshold": 80
+    },
+    "max_gini_params":
+    {
+        "period": 10,
+        "volume": 20,
+        "quota": 120
+    },
+    "tree_batch_size": 10,
+    "multiprocess": true,
+    "n_cores": 8,
+    "en_probe": true
+}
